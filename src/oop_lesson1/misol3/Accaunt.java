@@ -5,15 +5,15 @@ public class Accaunt {
     double balance;
     double annualInterestRate;
 
-    Accaunt(int id, double balance) {
-        this.id = id;
-        this.balance = balance;
+    Accaunt() {
+        id = 0;
+        balance = 0;
+        annualInterestRate=0;
     }
-
-    void setId(int id) {
-        this.id = id;
+    Accaunt(int id,double balance){
+        this.id=id;
+        this.balance=balance;
     }
-
     double getBalance() {
         return balance;
     }
@@ -28,18 +28,17 @@ public class Accaunt {
     }
 
     double getMonthlyInterest() {
-        return balance * (getMonthlyInterestRate() / 100);
+        return 0;
     }
 
     void withdraw(double amount) {
-        if (amount <= balance) {
-            balance -= amount;
-        } else {
-            System.out.println("Mablag' kam");
-        }
+        balance -= amount;
     }
 
     void deposit(double amount) {
         balance += amount;
+    }
+    void printinfo(){
+        System.out.printf("Accaunt: %d, balanc: %f, annualInterestRate: %f",id,balance,annualInterestRate);
     }
 }
