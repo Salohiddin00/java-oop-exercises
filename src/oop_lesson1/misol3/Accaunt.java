@@ -35,7 +35,7 @@ public class Accaunt {
         if (amount <= balance) {
             balance -= amount;
         } else {
-            System.out.println("Yetarli mablag' mavjud emas!");
+            System.out.println("Mablag' kam");
         }
     }
 
