@@ -34,10 +34,10 @@ public class Account {
         }
         return balance;
     }
-    public int transferTo(Account anotherAccount, int amount) {
+    public int transferTo(Account another, int amount) {
         if (amount <= balance) {
             this.debit(amount);
-            anotherAccount.credit(amount);
+            another.credit(amount);
         } else {
             System.out.println("Miqdor balansdan oshib ketdi");
         }
