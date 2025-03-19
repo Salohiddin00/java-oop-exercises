@@ -1,8 +1,8 @@
 package oop_lesson1.misol1;
 
 public class Rectangle {
-    double with;
-    double height;
+    protected double with;
+    protected double height;
     Rectangle(){
         with=1;
         height=1;
